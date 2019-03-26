@@ -68,6 +68,14 @@
     <Compile Include="Migrations\201903250054238_alterar2.Designer.cs">
       <DependentUpon>201903250054238_alterar2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903252345102_alterar3.cs" />
+    <Compile Include="Migrations\201903252345102_alterar3.Designer.cs">
+      <DependentUpon>201903252345102_alterar3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903260014047_alterar4.cs" />
+    <Compile Include="Migrations\201903260014047_alterar4.Designer.cs">
+      <DependentUpon>201903260014047_alterar4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryService.cs" />
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903250054238_alterar2.resx">
       <DependentUpon>201903250054238_alterar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903252345102_alterar3.resx">
+      <DependentUpon>201903252345102_alterar3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260014047_alterar4.resx">
+      <DependentUpon>201903260014047_alterar4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

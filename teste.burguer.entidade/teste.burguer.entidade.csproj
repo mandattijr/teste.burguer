@@ -51,10 +51,11 @@
     <Compile Include="Padrao\UnidadeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Salao\Cardapio.cs" />
+    <Compile Include="Salao\ItemPedido.cs" />
+    <Compile Include="Salao\Pedido.cs" />
+    <Compile Include="Salao\StatusPedido.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Gerencia\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

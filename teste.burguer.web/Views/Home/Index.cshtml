@@ -1,31 +1,53 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+﻿<div class="conteudo">
+    <h3>Pedido</h3>
+    <form id="fPedido" action="" class="conteudoForm">
+        <div class="form-row">
+            <div class="form-group col-sm-9">
+                <div class="form-row">
+                    <div class="form-group col-sm-4">
+                    </div>
+                    <div class="form-group col-sm-8">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-sm-3">
+                <div class="form-row">
+                    <label>Cardapio</label>
+                    <div class="form-group col-sm-12" id="Cardapio">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <h4>&nbsp;</h4>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        var listCardapioUrl = '@Url.RouteUrl(new { controller = "Home", action = "GetCardapio" })';
+
+        var paramsCliente = {};
+        paramsCliente.Id = null;
+        listarCardapio();
+
+        function listarCardapio() {
+            $("#Cardapio").children().remove();
+            $.getJSON(listCardapioUrl, '')
+            .done(function (myData) {
+                for (var item in myData.Lista) {
+                    var newRowContent = [
+                        '<div class="form-row">',
+                        '    <div class="form-group col-sm-10">' + myData.Lista[item].Nome + '</div>',
+                        '    <div class="form-group col-sm-2">',
+                        '        <input type="text" class="form-control" id="qtd' + myData.Lista[item].Id + '" maxlength="2">',
+                        '    </div>',
+                        '</div>'
+                    ].join('');
+
+                    $("#Cardapio").append(newRowContent);
+                }
+            }).always(function (myData) {
+            });
+        }
+    });
+</script>

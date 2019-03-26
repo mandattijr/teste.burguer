@@ -23,5 +23,7 @@ namespace teste.burguer.data.Mapping
         public class TipoProdutoMap : EntityTypeConfiguration<TipoProduto> { }
         public class UnidadeMedidaMap : EntityTypeConfiguration<UnidadeMedida> { }
         public class CardapioMap : EntityTypeConfiguration<Cardapio> { }
+        public class PedidoMap : EntityTypeConfiguration<Pedido> { }
+        public class StatusPedidoMap : EntityTypeConfiguration<StatusPedido> { }
     }
 }

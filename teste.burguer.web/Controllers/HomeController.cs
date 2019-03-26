@@ -29,9 +29,8 @@ namespace teste.burguer.web.Controllers
         public ActionResult GetCardapio()
         {
             List<Cardapio> lista = bf.CardapioGet().Todos();
-            //var data = lista.Select(m => new { m.Id, m.RazaoSocial }).ToList();
-            //return Json(new { Lista = data }, JsonRequestBehavior.AllowGet);
-            return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
+            var data = lista.Select(m => new { m.Id, m.Nome}).ToList();
+            return Json(new { Lista = data }, JsonRequestBehavior.AllowGet);
         }
     }
 }

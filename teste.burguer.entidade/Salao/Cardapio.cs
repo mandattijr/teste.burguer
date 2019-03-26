@@ -24,15 +24,15 @@ namespace teste.burguer.entidade.Salao
 
         [ForeignKey("Produto")]
         [DisplayName("Identificador do produto")]
-        public int IdProduto { get; set; }
+        public int? IdProduto { get; set; }
 
         [ForeignKey("Bebida")]
         [DisplayName("Identificador da bebida")]
-        public int IdBebida { get; set; }
+        public int? IdBebida { get; set; }
 
         [ForeignKey("Prato")]
         [DisplayName("Identificador da prato")]
-        public int IdPrato { get; set; }
+        public int? IdPrato { get; set; }
 
         [DisplayName("Classe do produto")]
         public virtual Produto Produto { get; set; }

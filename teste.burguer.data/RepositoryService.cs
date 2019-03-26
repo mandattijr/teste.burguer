@@ -20,7 +20,7 @@ namespace teste.burguer.data
 
         private IDbSet<TEntity> Entities
         {
-            get { return this.Context.Set<TEntity>(); }
+            get { return this.dbContext.Set<TEntity>(); }
         }
 
         public RepositoryService(DataContext dbContext)
