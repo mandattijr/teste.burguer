@@ -11,6 +11,7 @@ using teste.burguer.entidade.Estoque;
 
 namespace teste.burguer.entidade.Salao
 {
+    [Table("ItemPedido")]
     public class ItemPedido: ClassBase
     {
         [ForeignKey("Cardapio")]
@@ -20,6 +21,9 @@ namespace teste.burguer.entidade.Salao
         [Required, Column(TypeName = "INT")]
         [DisplayName("Quantidade")]
         public int Quantidade { get; set; }
+
+        [DisplayName("Classe do cardapio")]
+        public virtual Cardapio Cardapio { get; set; }
 
     }
 }

@@ -25,5 +25,6 @@ namespace teste.burguer.data.Mapping
         public class CardapioMap : EntityTypeConfiguration<Cardapio> { }
         public class PedidoMap : EntityTypeConfiguration<Pedido> { }
         public class StatusPedidoMap : EntityTypeConfiguration<StatusPedido> { }
+        public class ItemPedidoMap : EntityTypeConfiguration<ItemPedido> { }
     }
 }

@@ -68,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Salao\CardapioGet.cs" />
     <Compile Include="Salao\CardapioSet.cs" />
+    <Compile Include="Salao\ItemPedidoGet.cs" />
+    <Compile Include="Salao\ItemPedidoSet.cs" />
+    <Compile Include="Salao\PedidoGet.cs" />
+    <Compile Include="Salao\PedidoSet.cs" />
     <Compile Include="Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
